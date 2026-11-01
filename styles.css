@@ -180,9 +180,23 @@ h1 {
 
 .author {
   grid-area: author;
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  column-gap: 1.75rem;
+  align-items: start;
   margin-top: 4rem;
   padding-top: 2.5rem;
   border-top: 1px solid var(--rule);
+}
+
+.portrait {
+  margin-top: 0.45rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .contact {
@@ -229,7 +243,13 @@ h2 {
   }
 
   .author {
+    grid-template-columns: minmax(0, 1fr);
     margin-top: 3rem;
+  }
+
+  .portrait {
+    width: 8rem;
+    margin: 0 0 1.5rem;
   }
 
   .formats a {

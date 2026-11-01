@@ -31,7 +31,11 @@
   "@context": "https://schema.org",
   "@type": "Book",
   "name": "The Karmic Protocol",
-  "author": { "@type": "Person", "name": "Jeffrey A. Zyjeski" },
+  "author": {
+    "@type": "Person",
+    "name": "Jeffrey A. Zyjeski",
+    "image": "https://thekarmicprotocol.com/images/author-600.jpg"
+  },
   "inLanguage": "en",
   "genre": ["Science fiction", "Thriller"],
   "image": "https://thekarmicprotocol.com/images/cover-925.jpg",
@@ -102,9 +106,15 @@
     </div>
 
     <section class="author" aria-labelledby="about">
-      <h2 id="about">About the author</h2>
-      <p>Jeffrey A. Zyjeski is a Connecticut attorney and lobbyist who writes speculative fiction at the fault line between technology, power, and spiritual hunger. <cite>The Karmic Protocol</cite> is his debut techno-spiritual thriller.</p>
-      <p class="contact"><a href="mailto:jeff@zyjeski.com">jeff@zyjeski.com</a></p>
+      <picture class="portrait">
+        <source type="image/webp" srcset="/images/author-300.webp 300w, /images/author-600.webp 600w" sizes="8rem">
+        <img src="/images/author-300.jpg" srcset="/images/author-300.jpg 300w, /images/author-600.jpg 600w" sizes="8rem" width="600" height="750" alt="Jeffrey A. Zyjeski" loading="lazy">
+      </picture>
+      <div class="author-text">
+        <h2 id="about">About the author</h2>
+        <p>Jeffrey A. Zyjeski is a Connecticut attorney and lobbyist who writes speculative fiction at the fault line between technology, power, and spiritual hunger. <cite>The Karmic Protocol</cite> is his debut techno-spiritual thriller.</p>
+        <p class="contact"><a href="mailto:jeff@zyjeski.com">jeff@zyjeski.com</a></p>
+      </div>
     </section>
 
     <footer class="site-footer">
