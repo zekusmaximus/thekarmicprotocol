@@ -217,6 +217,82 @@ h2 {
   font-size: 0.875rem;
 }
 
+.read-link {
+  margin-top: 1.75rem;
+}
+
+/* Chapter excerpt */
+.reading {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding-top: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.chapter-head {
+  margin-bottom: 2.75rem;
+  text-align: center;
+}
+
+.from {
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.from a {
+  text-decoration: none;
+}
+
+.from a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+
+.chapter-head h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.4rem);
+}
+
+.chapter-number {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.epigraphs {
+  max-width: 27rem;
+  margin: 2rem auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.epigraphs p + p {
+  margin-top: 0.85rem;
+}
+
+.chapter-text {
+  line-height: 1.65;
+}
+
+.chapter-text p + p {
+  text-indent: 1.5em;
+}
+
+.chapter-end {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.chapter-end .buy {
+  margin-top: 1.75rem;
+}
+
 /* 404 page */
 .missing {
   grid-area: book;
