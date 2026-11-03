@@ -3,25 +3,25 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path(.*)",
       "has": [
         {
           "type": "host",
           "value": "karmicprotocol.com"
         }
       ],
-      "destination": "https://www.thekarmicprotocol.com/:path*",
+      "destination": "https://www.thekarmicprotocol.com/:path",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/:path(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.karmicprotocol.com"
         }
       ],
-      "destination": "https://www.thekarmicprotocol.com/:path*",
+      "destination": "https://www.thekarmicprotocol.com/:path",
       "permanent": true
     },
     {
