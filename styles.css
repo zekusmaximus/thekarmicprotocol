@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Literata";
+  src: url("/fonts/literata-latin-opsz-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Literata";
+  src: url("/fonts/literata-latin-opsz-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Colors are taken from the cover: the charcoal of the background and the
+   gold of the title, darkened enough to read on paper. */
+:root {
+  --paper: #f4f1ea;
+  --ink: #1c2022;
+  --muted: #5c5f60;
+  --rule: #d9d3c5;
+  --gold: #7a5c22;
+  --cover-col: 20rem;
+  --measure: 34rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Literata", Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e8dbb4;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.page {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header {
+  padding-top: 2rem;
+  font-size: 1rem;
+}
+
+.site-header a {
+  text-decoration: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--cover-col)) minmax(0, var(--measure));
+  grid-template-areas:
+    "cover  book"
+    ".      author"
+    ".      footer";
+  column-gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+  padding-top: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.cover {
+  grid-area: cover;
+  margin: 0;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow:
+    0 1px 2px rgba(20, 24, 26, 0.14),
+    0 14px 30px -10px rgba(20, 24, 26, 0.4);
+}
+
+.book {
+  grid-area: book;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.4vw, 3.15rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.kind {
+  margin: 0.6rem 0 2rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.blurb p + p {
+  margin-top: 1em;
+}
+
+.buy {
+  margin-top: 2.25rem;
+}
+
+.buy-label {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.formats a {
+  display: block;
+  padding: 0.6rem 1.15rem 0.65rem;
+  border: 1px solid var(--ink);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.formats a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.details {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-variant-numeric: lining-nums;
+}
+
+.author {
+  grid-area: author;
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  column-gap: 1.75rem;
+  align-items: start;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.portrait {
+  margin-top: 0.45rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  margin-top: 1em;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.site-footer {
+  grid-area: footer;
+  padding: 4rem 0 3rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.read-link {
+  margin-top: 1.75rem;
+}
+
+/* Chapter excerpt */
+.reading {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding-top: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.chapter-head {
+  margin-bottom: 2.75rem;
+  text-align: center;
+}
+
+.from {
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.from a {
+  text-decoration: none;
+}
+
+.from a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+
+.chapter-head h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.4rem);
+}
+
+.chapter-number {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.epigraphs {
+  max-width: 27rem;
+  margin: 2rem auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.epigraphs p + p {
+  margin-top: 0.85rem;
+}
+
+.chapter-text {
+  line-height: 1.65;
+}
+
+.chapter-text p + p {
+  text-indent: 1.5em;
+}
+
+.chapter-end {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.chapter-end .buy {
+  margin-top: 1.75rem;
+}
+
+/* 404 page */
+.missing {
+  grid-area: book;
+}
+
+.missing p + p {
+  margin-top: 1em;
+}
+
+@media (max-width: 50rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "cover"
+      "book"
+      "author"
+      "footer";
+    padding-top: 2rem;
+  }
+
+  .cover {
+    width: min(15rem, 70%);
+    margin-bottom: 2.5rem;
+  }
+
+  .author {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 3rem;
+  }
+
+  .portrait {
+    width: 8rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .formats a {
+    padding-inline: 0.85rem;
+  }
+}
+
+@media print {
+  .buy {
+    display: none;
+  }
+
+  .cover img {
+    box-shadow: none;
+  }
+}
