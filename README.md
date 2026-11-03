@@ -22,4 +22,6 @@ Then open http://localhost:8000. Opening `index.html` directly from disk won't l
 
 ## Deploy
 
-On Vercel, import this repository as a new project with framework preset "Other". It needs no build command and no output directory. Then move `thekarmicprotocol.com` and `karmicprotocol.com` from the old project to this one under Settings → Domains, and set `karmicprotocol.com` to redirect to `thekarmicprotocol.com`.
+Hosted on Vercel (framework preset "Other", no build step). Every push to `main` deploys to production; other branches get preview URLs.
+
+The primary address is `https://www.thekarmicprotocol.com`. Vercel redirects the bare `thekarmicprotocol.com` to it, and `vercel.json` sends `karmicprotocol.com` and `www.karmicprotocol.com` there too. Canonical tags, Open Graph tags, structured data, `sitemap.xml` and `robots.txt` all use the `www` address, so keep them in step if the primary domain ever changes.
